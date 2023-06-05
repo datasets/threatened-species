@@ -1,0 +1,43 @@
+name: threatened-species
+title: Threatened Species
+sources:
+  - title: IUCN Red List of Threatened Animal Species
+    path: https://www.iucnredlist.org/
+resources:
+  - name: threatened-species
+    type: table
+    path: data/threatened-species.csv
+    scheme: file
+    format: csv
+    mediaType: text/csv
+    encoding: utf-8
+    schema:
+      fields:
+        - name: taxonid
+          type: integer
+        - name: kingdom_name
+          type: string
+        - name: phylum_name
+          type: string
+        - name: class_name
+          type: string
+        - name: order_name
+          type: string
+        - name: family_name
+          type: string
+        - name: genus_name
+          type: string
+        - name: scientific_name
+          type: string
+        - name: taxonomic_authority
+          type: string
+        - name: infra_rank
+          type: any
+        - name: infra_name
+          type: any
+        - name: population
+          type: any
+        - name: category
+          type: string
+        - name: main_common_name
+          type: string

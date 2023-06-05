@@ -1,0 +1,8 @@
+{
+	"name": "Dataset",
+	"image": "mcr.microsoft.com/devcontainers/python:0-3.11",
+	"postCreateCommand": "pip3 install --user -r scripts/requirements.txt",
+	"features": {
+		"ghcr.io/rocker-org/devcontainer-features/quarto-cli": "latest"
+	}
+}
