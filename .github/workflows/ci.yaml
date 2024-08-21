@@ -34,4 +34,4 @@ jobs:
       - name: Install frictionless
         run: pip install frictionless
       - name: Describe
-        run: frictionless describe https://raw.githubusercontent.com/datonic/threatened-animal-species/main/datapackage.yaml --stats
+        run: frictionless describe https://raw.githubusercontent.com/datasets/threatened-species/main/datapackage.yaml --stats
