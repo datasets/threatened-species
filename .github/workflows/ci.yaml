@@ -17,6 +17,12 @@ jobs:
         env:
           IUCNREDLIST_TOKEN: ${{ secrets.IUCNREDLIST_TOKEN }}
         run: make data
+      - name: Verify dataset is populated
+        run: >-
+          .venv/bin/python -c "import pandas as pd;
+          df = pd.read_csv('data/threatened-species.csv');
+          assert not df.empty, 'Dataset is empty';
+          print('Validated', len(df), 'rows')"
       - name: Commit and push changes
         run: |
           git config --global user.name "GitHub Action"
